@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Segoe UI', system-ui, sans-serif;
+  color: #1E293B;
+}
+
+input:focus {
+  outline: none;
+  border-color: #FB923C !important;
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.15);
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.loading-icon {
+  display: inline-block;
+  animation: spin-slow 2s linear infinite;
+}
+
+.loading-dots {
+  animation: pulse-soft 1.5s ease-in-out infinite;
+}
